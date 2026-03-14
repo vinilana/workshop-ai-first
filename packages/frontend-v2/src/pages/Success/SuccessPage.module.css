@@ -1,0 +1,53 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 48px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  max-width: 480px;
+  width: 100%;
+}
+
+.checkmark {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  color: #ffffff;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.message {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.link:hover {
+  text-decoration: underline;
+}

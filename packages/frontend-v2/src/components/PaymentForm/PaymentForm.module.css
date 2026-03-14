@@ -1,0 +1,72 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+
+.input:focus {
+  border-color: var(--color-input-focus);
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.12);
+  z-index: 1;
+  position: relative;
+}
+
+.input::placeholder {
+  color: #aab7c4;
+}
+
+.inputError {
+  border-color: var(--color-error);
+}
+
+.cardGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardRow {
+  display: flex;
+}
+
+.cardExpiry {
+  border-radius: 0 0 0 var(--radius);
+  border-top: none;
+  flex: 1;
+}
+
+.cardCvc {
+  border-radius: 0 0 var(--radius) 0;
+  border-top: none;
+  border-left: none;
+  flex: 1;
+}
+
+.error {
+  font-size: 12px;
+  color: var(--color-error);
+  margin-top: 2px;
+}

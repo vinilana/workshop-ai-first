@@ -1,0 +1,32 @@
+{
+  "name": "dom-pagamentos",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "first-run": "npm run setup && npm run seed",
+    "setup": "npm install && npm run build:shared",
+    "build:shared": "npm run build -w packages/shared",
+    "build:api-core": "npm run build -w packages/api-core",
+    "build:api": "npm run build -w packages/api",
+    "build:gateway": "npm run build -w packages/api-gateway",
+    "build:frontend-v1": "npm run build -w packages/frontend-v1",
+    "build:frontend-v2": "npm run build -w packages/frontend-v2",
+    "build:all": "npm run build:shared && npm run build:api-core && npm run build:api && npm run build:gateway",
+    "seed": "npm run seed -w packages/api-core",
+    "seed:reset": "npm run seed:reset -w packages/api-core",
+    "dev:api-core": "npm run start:dev -w packages/api-core",
+    "dev:api": "npm run start:dev -w packages/api",
+    "dev:gateway": "npm run start:dev -w packages/api-gateway",
+    "dev:frontend-v1": "npm run dev -w packages/frontend-v1",
+    "dev:frontend-v2": "npm run dev -w packages/frontend-v2",
+    "dev:backend": "concurrently \"npm run dev:api-core\" \"npm run dev:api\" \"npm run dev:gateway\"",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend-v2\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}

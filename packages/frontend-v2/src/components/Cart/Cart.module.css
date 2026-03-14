@@ -1,0 +1,92 @@
+.cart {
+  position: sticky;
+  top: 24px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.empty {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.itemInfo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.itemName {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.itemQty {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.itemActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.itemPrice {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: var(--color-error);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.removeBtn:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 16px 0;
+}
+
+.subtotalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.subtotalValue {
+  font-weight: 700;
+}

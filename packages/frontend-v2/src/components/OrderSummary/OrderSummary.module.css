@@ -1,0 +1,72 @@
+.summary {
+  background-color: #fafafa;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  height: fit-content;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.itemLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.itemQty {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.itemPrice {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 20px 0;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.totalValue {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
