@@ -39,3 +39,21 @@ export async function getProduct(id: string): Promise<Product> {
   const apiProduct = await apiRequest<ApiProduct>(`/products/${id}`);
   return mapProduct(apiProduct);
 }
+
+export interface ProductFilters {
+  name?: string;
+  active?: string;
+  priceType?: string;
+}
+
+export async function searchProducts(filters: ProductFilters): Promise<Product[]> {
+  const params = new URLSearchParams();
+  if (filters.name) params.set('name', filters.name);
+  if (filters.active) params.set('active', filters.active);
+  if (filters.priceType) params.set('price_type', filters.priceType);
+
+  const query = params.toString();
+  const path = query ? `/products/search?${query}` : '/products/search';
+  const apiProducts = await apiRequest<ApiProduct[]>(path);
+  return apiProducts.map(mapProduct);
+}

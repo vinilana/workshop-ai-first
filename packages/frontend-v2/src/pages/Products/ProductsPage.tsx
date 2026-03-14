@@ -2,13 +2,14 @@ import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useProducts } from '@/hooks/useProducts';
 import { ProductCard } from '@/components/ProductCard/ProductCard';
+import { ProductFilters } from '@/components/ProductFilters/ProductFilters';
 import { Cart, CartItem } from '@/components/Cart/Cart';
 import { Spinner } from '@/components/Spinner/Spinner';
 import { createCheckoutSession } from '@/services/checkout.service';
 import styles from './ProductsPage.module.css';
 
 export function ProductsPage() {
-  const { products, loading, error } = useProducts();
+  const { products, loading, error, filters, setFilters } = useProducts();
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
   const navigate = useNavigate();
@@ -57,6 +58,7 @@ export function ProductsPage() {
     <div className={styles.page}>
       <div className={styles.productsSection}>
         <h2 className={styles.heading}>Produtos</h2>
+        <ProductFilters filters={filters} onChange={setFilters} />
         <div className={styles.grid}>
           {products.map(product => (
             <ProductCard
