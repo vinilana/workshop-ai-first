@@ -1,0 +1,1299 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-03-14T14:30:36.974Z",
+  "stack": {
+    "primaryLanguage": "typescript",
+    "languages": [
+      "javascript",
+      "typescript"
+    ],
+    "frameworks": [],
+    "buildTools": [],
+    "testFrameworks": [],
+    "packageManager": "npm",
+    "isMonorepo": false,
+    "hasDocker": false,
+    "hasCI": false
+  },
+  "structure": {
+    "totalFiles": 283,
+    "rootPath": ".",
+    "topDirectories": [
+      {
+        "name": "data",
+        "fileCount": 3,
+        "description": "Module directory"
+      },
+      {
+        "name": "packages",
+        "fileCount": 275,
+        "description": "Package definitions"
+      }
+    ],
+    "languageDistribution": [
+      {
+        "extension": ".ts",
+        "count": 113
+      },
+      {
+        "extension": ".js",
+        "count": 50
+      },
+      {
+        "extension": ".map",
+        "count": 49
+      },
+      {
+        "extension": ".tsx",
+        "count": 22
+      },
+      {
+        "extension": ".json",
+        "count": 20
+      },
+      {
+        "extension": ".css",
+        "count": 18
+      },
+      {
+        "extension": ".html",
+        "count": 3
+      },
+      {
+        "extension": ".tsbuildinfo",
+        "count": 3
+      },
+      {
+        "extension": ".md",
+        "count": 2
+      },
+      {
+        "extension": ".sqlite-wal",
+        "count": 1
+      }
+    ]
+  },
+  "architecture": {
+    "layers": [
+      {
+        "name": "Controllers",
+        "description": "Request handling and routing",
+        "directories": [
+          "packages/api-gateway/src",
+          "packages/api-core/src",
+          "packages/api/src",
+          "packages/api-gateway/src/proxy",
+          "packages/api-gateway/src/products",
+          "packages/api-gateway/src/payments",
+          "packages/api-gateway/src/health",
+          "packages/api-gateway/src/customers",
+          "packages/api-gateway/src/checkout",
+          "packages/api/src/products",
+          "packages/api/src/database",
+          "packages/api/src/checkout",
+          "packages/api/src/products/presentation",
+          "packages/api/src/products/domain",
+          "packages/api/src/products/infrastructure",
+          "packages/api/src/common/interceptors",
+          "packages/api/src/common/filters",
+          "packages/api/src/checkout/presentation",
+          "packages/api/src/checkout/infrastructure",
+          "packages/api/src/checkout/domain"
+        ],
+        "symbolCount": 47,
+        "dependsOn": [
+          "Services"
+        ]
+      },
+      {
+        "name": "Services",
+        "description": "Business logic and orchestration",
+        "directories": [
+          "packages/api-core/src",
+          "packages/frontend-v2/src/services",
+          "packages/api-gateway/src/proxy",
+          "packages/api-gateway/src/config",
+          "packages/api/src/products/application",
+          "packages/api/src/checkout/application"
+        ],
+        "symbolCount": 26,
+        "dependsOn": [
+          "Controllers"
+        ]
+      },
+      {
+        "name": "Utils",
+        "description": "Shared utilities and helpers",
+        "directories": [
+          "packages/shared/src"
+        ],
+        "symbolCount": 18,
+        "dependsOn": []
+      },
+      {
+        "name": "Components",
+        "description": "UI components and views",
+        "directories": [
+          "packages/frontend-v1/src/pages",
+          "packages/frontend-v2/src/pages/Success",
+          "packages/frontend-v2/src/pages/Products",
+          "packages/frontend-v2/src/pages/Checkout",
+          "packages/frontend-v2/src/pages/Cancel",
+          "packages/frontend-v2/src/components/Spinner",
+          "packages/frontend-v2/src/components/ProductFilters",
+          "packages/frontend-v2/src/components/ProductCard",
+          "packages/frontend-v2/src/components/PaymentForm",
+          "packages/frontend-v2/src/components/OrderSummary",
+          "packages/frontend-v2/src/components/Layout",
+          "packages/frontend-v2/src/components/CustomerForm",
+          "packages/frontend-v2/src/components/Cart",
+          "packages/frontend-v2/src/components/CardInput",
+          "packages/frontend-v2/src/components/Button"
+        ],
+        "symbolCount": 33,
+        "dependsOn": []
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Repository",
+        "confidence": 0.9,
+        "description": "Abstracts data access logic",
+        "occurrences": 2
+      },
+      {
+        "name": "Service Layer",
+        "confidence": 0.85,
+        "description": "Encapsulates business logic in service classes",
+        "occurrences": 2
+      },
+      {
+        "name": "Controller",
+        "confidence": 0.9,
+        "description": "Handles incoming requests and returns responses",
+        "occurrences": 8
+      }
+    ],
+    "entryPoints": [
+      "packages/api-gateway/src/main.ts",
+      "packages/api-core/src/main.ts",
+      "packages/shared/src/index.ts",
+      "packages/api/src/main.ts",
+      "packages/frontend-v2/src/main.tsx",
+      "packages/frontend-v1/src/main.tsx"
+    ],
+    "mainEntryPoints": [],
+    "moduleExports": [
+      "packages/api-gateway/src/main.ts",
+      "packages/api-core/src/main.ts",
+      "packages/shared/src/index.ts",
+      "packages/api/src/main.ts",
+      "packages/frontend-v2/src/main.tsx",
+      "packages/frontend-v1/src/main.tsx"
+    ]
+  },
+  "symbols": {
+    "classes": [
+      {
+        "name": "AppController",
+        "kind": "class",
+        "file": "packages/api-core/src/app.controller.ts",
+        "line": 14,
+        "exported": true
+      },
+      {
+        "name": "AppModule",
+        "kind": "class",
+        "file": "packages/api-gateway/src/app.module.ts",
+        "line": 21,
+        "exported": true
+      },
+      {
+        "name": "AppModule",
+        "kind": "class",
+        "file": "packages/api-core/src/app.module.ts",
+        "line": 10,
+        "exported": true
+      },
+      {
+        "name": "AppModule",
+        "kind": "class",
+        "file": "packages/api/src/app.module.ts",
+        "line": 9,
+        "exported": true
+      },
+      {
+        "name": "AppService",
+        "kind": "class",
+        "file": "packages/api-core/src/app.service.ts",
+        "line": 9,
+        "exported": true
+      },
+      {
+        "name": "CheckoutController",
+        "kind": "class",
+        "file": "packages/api-gateway/src/checkout/checkout.controller.ts",
+        "line": 5,
+        "exported": true
+      },
+      {
+        "name": "CheckoutController",
+        "kind": "class",
+        "file": "packages/api/src/checkout/presentation/checkout.controller.ts",
+        "line": 8,
+        "exported": true
+      },
+      {
+        "name": "CheckoutMapper",
+        "kind": "class",
+        "file": "packages/api/src/checkout/infrastructure/checkout.mapper.ts",
+        "line": 26,
+        "exported": true
+      },
+      {
+        "name": "CheckoutModule",
+        "kind": "class",
+        "file": "packages/api-gateway/src/checkout/checkout.module.ts",
+        "line": 9,
+        "exported": true
+      },
+      {
+        "name": "CheckoutModule",
+        "kind": "class",
+        "file": "packages/api/src/checkout/checkout.module.ts",
+        "line": 21,
+        "exported": true
+      },
+      {
+        "name": "CheckoutSession",
+        "kind": "class",
+        "file": "packages/api/src/checkout/domain/checkout-session.entity.ts",
+        "line": 5,
+        "exported": true
+      },
+      {
+        "name": "CreateCheckoutSessionDto",
+        "kind": "class",
+        "file": "packages/api/src/checkout/presentation/create-checkout-session.dto.ts",
+        "line": 18,
+        "exported": true
+      },
+      {
+        "name": "CreateCheckoutSessionUseCase",
+        "kind": "class",
+        "file": "packages/api/src/checkout/application/create-checkout-session.use-case.ts",
+        "line": 10,
+        "exported": true
+      },
+      {
+        "name": "CustomersController",
+        "kind": "class",
+        "file": "packages/api-gateway/src/customers/customers.controller.ts",
+        "line": 5,
+        "exported": true
+      },
+      {
+        "name": "CustomersModule",
+        "kind": "class",
+        "file": "packages/api-gateway/src/customers/customers.module.ts",
+        "line": 9,
+        "exported": true
+      },
+      {
+        "name": "DatabaseModule",
+        "kind": "class",
+        "file": "packages/api/src/database/database.module.ts",
+        "line": 9,
+        "exported": true
+      },
+      {
+        "name": "FilterProductsUseCase",
+        "kind": "class",
+        "file": "packages/api/src/products/application/filter-products.use-case.ts",
+        "line": 6,
+        "exported": true
+      },
+      {
+        "name": "GetCheckoutSessionUseCase",
+        "kind": "class",
+        "file": "packages/api/src/checkout/application/get-checkout-session.use-case.ts",
+        "line": 6,
+        "exported": true
+      },
+      {
+        "name": "GetProductByIdUseCase",
+        "kind": "class",
+        "file": "packages/api/src/products/application/get-product-by-id.use-case.ts",
+        "line": 6,
+        "exported": true
+      },
+      {
+        "name": "GetProductsUseCase",
+        "kind": "class",
+        "file": "packages/api/src/products/application/get-products.use-case.ts",
+        "line": 6,
+        "exported": true
+      },
+      {
+        "name": "HealthController",
+        "kind": "class",
+        "file": "packages/api-gateway/src/health/health.controller.ts",
+        "line": 7,
+        "exported": true
+      },
+      {
+        "name": "HealthModule",
+        "kind": "class",
+        "file": "packages/api-gateway/src/health/health.module.ts",
+        "line": 9,
+        "exported": true
+      },
+      {
+        "name": "HttpExceptionFilter",
+        "kind": "class",
+        "file": "packages/api/src/common/filters/http-exception.filter.ts",
+        "line": 11,
+        "exported": true
+      },
+      {
+        "name": "LineItem",
+        "kind": "class",
+        "file": "packages/api/src/checkout/domain/line-item.value-object.ts",
+        "line": 1,
+        "exported": true
+      },
+      {
+        "name": "LineItemDto",
+        "kind": "class",
+        "file": "packages/api/src/checkout/presentation/create-checkout-session.dto.ts",
+        "line": 4,
+        "exported": true
+      },
+      {
+        "name": "PaymentsController",
+        "kind": "class",
+        "file": "packages/api-gateway/src/payments/payments.controller.ts",
+        "line": 5,
+        "exported": true
+      },
+      {
+        "name": "PaymentsModule",
+        "kind": "class",
+        "file": "packages/api-gateway/src/payments/payments.module.ts",
+        "line": 9,
+        "exported": true
+      },
+      {
+        "name": "Price",
+        "kind": "class",
+        "file": "packages/api/src/products/domain/price.entity.ts",
+        "line": 1,
+        "exported": true
+      },
+      {
+        "name": "Product",
+        "kind": "class",
+        "file": "packages/api/src/products/domain/product.entity.ts",
+        "line": 3,
+        "exported": true
+      },
+      {
+        "name": "ProductMapper",
+        "kind": "class",
+        "file": "packages/api/src/products/infrastructure/product.mapper.ts",
+        "line": 25,
+        "exported": true
+      }
+    ],
+    "interfaces": [
+      {
+        "name": "Address",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 32,
+        "exported": true
+      },
+      {
+        "name": "ApiResponse",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 116,
+        "exported": true
+      },
+      {
+        "name": "CardDetails",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 49,
+        "exported": true
+      },
+      {
+        "name": "CartItem",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/components/Cart/Cart.tsx",
+        "line": 4,
+        "exported": true
+      },
+      {
+        "name": "CheckoutItem",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/services/checkout.service.ts",
+        "line": 3,
+        "exported": true
+      },
+      {
+        "name": "CheckoutLineItem",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/services/checkout.service.ts",
+        "line": 12,
+        "exported": true
+      },
+      {
+        "name": "CheckoutSession",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 56,
+        "exported": true
+      },
+      {
+        "name": "CheckoutSession",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/services/checkout.service.ts",
+        "line": 19,
+        "exported": true
+      },
+      {
+        "name": "CheckoutSessionItemRow",
+        "kind": "interface",
+        "file": "packages/api/src/checkout/infrastructure/checkout.mapper.ts",
+        "line": 15,
+        "exported": true
+      },
+      {
+        "name": "CheckoutSessionResponseDto",
+        "kind": "interface",
+        "file": "packages/api/src/checkout/presentation/checkout-session-response.dto.ts",
+        "line": 11,
+        "exported": true
+      },
+      {
+        "name": "CheckoutSessionRow",
+        "kind": "interface",
+        "file": "packages/api/src/checkout/infrastructure/checkout.mapper.ts",
+        "line": 4,
+        "exported": true
+      },
+      {
+        "name": "CreateCheckoutData",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/services/checkout.service.ts",
+        "line": 8,
+        "exported": true
+      },
+      {
+        "name": "CreateCheckoutSessionDto",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 91,
+        "exported": true
+      },
+      {
+        "name": "Customer",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 22,
+        "exported": true
+      },
+      {
+        "name": "LineItem",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 71,
+        "exported": true
+      },
+      {
+        "name": "LineItemResponseDto",
+        "kind": "interface",
+        "file": "packages/api/src/checkout/presentation/checkout-session-response.dto.ts",
+        "line": 1,
+        "exported": true
+      },
+      {
+        "name": "Payment",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 79,
+        "exported": true
+      },
+      {
+        "name": "PaymentData",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/services/payments.service.ts",
+        "line": 3,
+        "exported": true
+      },
+      {
+        "name": "PaymentFormErrors",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/hooks/usePaymentForm.ts",
+        "line": 13,
+        "exported": true
+      },
+      {
+        "name": "PaymentFormState",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/hooks/usePaymentForm.ts",
+        "line": 3,
+        "exported": true
+      },
+      {
+        "name": "PaymentMethod",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 41,
+        "exported": true
+      },
+      {
+        "name": "PaymentResult",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/services/payments.service.ts",
+        "line": 13,
+        "exported": true
+      },
+      {
+        "name": "Price",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 11,
+        "exported": true
+      },
+      {
+        "name": "PriceResponseDto",
+        "kind": "interface",
+        "file": "packages/api/src/products/presentation/product-response.dto.ts",
+        "line": 1,
+        "exported": true
+      },
+      {
+        "name": "PriceRow",
+        "kind": "interface",
+        "file": "packages/api/src/products/infrastructure/product.mapper.ts",
+        "line": 13,
+        "exported": true
+      },
+      {
+        "name": "ProcessPaymentDto",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 98,
+        "exported": true
+      },
+      {
+        "name": "Product",
+        "kind": "interface",
+        "file": "packages/shared/src/types.ts",
+        "line": 1,
+        "exported": true
+      },
+      {
+        "name": "Product",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/services/products.service.ts",
+        "line": 3,
+        "exported": true
+      },
+      {
+        "name": "ProductFilters",
+        "kind": "interface",
+        "file": "packages/frontend-v2/src/services/products.service.ts",
+        "line": 43,
+        "exported": true
+      },
+      {
+        "name": "ProductFilters",
+        "kind": "interface",
+        "file": "packages/api/src/products/domain/product.repository.ts",
+        "line": 3,
+        "exported": true
+      }
+    ],
+    "functions": [
+      {
+        "name": "apiRequest",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/services/api.ts",
+        "line": 3,
+        "exported": true
+      },
+      {
+        "name": "App",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/App.tsx",
+        "line": 8,
+        "exported": true
+      },
+      {
+        "name": "Button",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/components/Button/Button.tsx",
+        "line": 10,
+        "exported": true
+      },
+      {
+        "name": "CancelPage",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/pages/Cancel/CancelPage.tsx",
+        "line": 4,
+        "exported": true
+      },
+      {
+        "name": "CardInput",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/components/CardInput/CardInput.tsx",
+        "line": 20,
+        "exported": true
+      },
+      {
+        "name": "centsToDecimal",
+        "kind": "function",
+        "file": "packages/shared/src/utils.ts",
+        "line": 17,
+        "exported": true
+      },
+      {
+        "name": "CheckoutPage",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/pages/Checkout/CheckoutPage.tsx",
+        "line": 10,
+        "exported": true
+      },
+      {
+        "name": "createCheckoutSession",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/services/checkout.service.ts",
+        "line": 53,
+        "exported": true
+      },
+      {
+        "name": "CustomerForm",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/components/CustomerForm/CustomerForm.tsx",
+        "line": 13,
+        "exported": true
+      },
+      {
+        "name": "decimalToCents",
+        "kind": "function",
+        "file": "packages/shared/src/utils.ts",
+        "line": 21,
+        "exported": true
+      },
+      {
+        "name": "fetchSession",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/hooks/useCheckoutSession.ts",
+        "line": 17,
+        "exported": true
+      },
+      {
+        "name": "formatCurrency",
+        "kind": "function",
+        "file": "packages/shared/src/utils.ts",
+        "line": 8,
+        "exported": true
+      },
+      {
+        "name": "generateId",
+        "kind": "function",
+        "file": "packages/shared/src/utils.ts",
+        "line": 3,
+        "exported": true
+      },
+      {
+        "name": "getCheckoutSession",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/services/checkout.service.ts",
+        "line": 69,
+        "exported": true
+      },
+      {
+        "name": "getDb",
+        "kind": "function",
+        "file": "packages/api-core/src/database.ts",
+        "line": 8,
+        "exported": true
+      },
+      {
+        "name": "getProduct",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/services/products.service.ts",
+        "line": 38,
+        "exported": true
+      },
+      {
+        "name": "getProducts",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/services/products.service.ts",
+        "line": 33,
+        "exported": true
+      },
+      {
+        "name": "Layout",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/components/Layout/Layout.tsx",
+        "line": 9,
+        "exported": true
+      },
+      {
+        "name": "OrderSummary",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/components/OrderSummary/OrderSummary.tsx",
+        "line": 21,
+        "exported": true
+      },
+      {
+        "name": "processPayment",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/services/payments.service.ts",
+        "line": 19,
+        "exported": true
+      },
+      {
+        "name": "ProductCard",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/components/ProductCard/ProductCard.tsx",
+        "line": 18,
+        "exported": true
+      },
+      {
+        "name": "ProductFilters",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/components/ProductFilters/ProductFilters.tsx",
+        "line": 9,
+        "exported": true
+      },
+      {
+        "name": "searchProducts",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/services/products.service.ts",
+        "line": 49,
+        "exported": true
+      },
+      {
+        "name": "Spinner",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/components/Spinner/Spinner.tsx",
+        "line": 3,
+        "exported": true
+      },
+      {
+        "name": "SuccessPage",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/pages/Success/SuccessPage.tsx",
+        "line": 4,
+        "exported": true
+      },
+      {
+        "name": "useCheckoutSession",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/hooks/useCheckoutSession.ts",
+        "line": 4,
+        "exported": true
+      },
+      {
+        "name": "usePaymentForm",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/hooks/usePaymentForm.ts",
+        "line": 31,
+        "exported": true
+      },
+      {
+        "name": "useProducts",
+        "kind": "function",
+        "file": "packages/frontend-v2/src/hooks/useProducts.ts",
+        "line": 4,
+        "exported": true
+      },
+      {
+        "name": "bootstrap",
+        "kind": "function",
+        "file": "packages/api-gateway/src/main.ts",
+        "line": 4,
+        "exported": false
+      },
+      {
+        "name": "bootstrap",
+        "kind": "function",
+        "file": "packages/api-core/src/main.ts",
+        "line": 4,
+        "exported": false
+      }
+    ],
+    "types": [
+      {
+        "name": "CheckoutSessionStatus",
+        "kind": "type",
+        "file": "packages/api/src/checkout/domain/checkout-session.entity.ts",
+        "line": 3,
+        "exported": true
+      },
+      {
+        "name": "Currency",
+        "kind": "type",
+        "file": "packages/shared/src/constants.ts",
+        "line": 8,
+        "exported": true
+      },
+      {
+        "name": "PaymentMethodType",
+        "kind": "type",
+        "file": "packages/shared/src/constants.ts",
+        "line": 11,
+        "exported": true
+      }
+    ],
+    "enums": []
+  },
+  "publicAPI": [
+    {
+      "name": "Address",
+      "kind": "interface",
+      "file": "packages/shared/src/types.ts",
+      "line": 32,
+      "exported": true
+    },
+    {
+      "name": "apiRequest",
+      "kind": "function",
+      "file": "packages/frontend-v2/src/services/api.ts",
+      "line": 3,
+      "exported": true
+    },
+    {
+      "name": "ApiResponse",
+      "kind": "interface",
+      "file": "packages/shared/src/types.ts",
+      "line": 116,
+      "exported": true
+    },
+    {
+      "name": "App",
+      "kind": "function",
+      "file": "packages/frontend-v2/src/App.tsx",
+      "line": 8,
+      "exported": true
+    },
+    {
+      "name": "AppController",
+      "kind": "class",
+      "file": "packages/api-core/src/app.controller.ts",
+      "line": 14,
+      "exported": true
+    },
+    {
+      "name": "AppModule",
+      "kind": "class",
+      "file": "packages/api-gateway/src/app.module.ts",
+      "line": 21,
+      "exported": true
+    },
+    {
+      "name": "AppModule",
+      "kind": "class",
+      "file": "packages/api-core/src/app.module.ts",
+      "line": 10,
+      "exported": true
+    },
+    {
+      "name": "AppModule",
+      "kind": "class",
+      "file": "packages/api/src/app.module.ts",
+      "line": 9,
+      "exported": true
+    },
+    {
+      "name": "AppService",
+      "kind": "class",
+      "file": "packages/api-core/src/app.service.ts",
+      "line": 9,
+      "exported": true
+    },
+    {
+      "name": "Button",
+      "kind": "function",
+      "file": "packages/frontend-v2/src/components/Button/Button.tsx",
+      "line": 10,
+      "exported": true
+    },
+    {
+      "name": "CancelPage",
+      "kind": "function",
+      "file": "packages/frontend-v2/src/pages/Cancel/CancelPage.tsx",
+      "line": 4,
+      "exported": true
+    },
+    {
+      "name": "CardDetails",
+      "kind": "interface",
+      "file": "packages/shared/src/types.ts",
+      "line": 49,
+      "exported": true
+    },
+    {
+      "name": "CardInput",
+      "kind": "function",
+      "file": "packages/frontend-v2/src/components/CardInput/CardInput.tsx",
+      "line": 20,
+      "exported": true
+    },
+    {
+      "name": "CartItem",
+      "kind": "interface",
+      "file": "packages/frontend-v2/src/components/Cart/Cart.tsx",
+      "line": 4,
+      "exported": true
+    },
+    {
+      "name": "centsToDecimal",
+      "kind": "function",
+      "file": "packages/shared/src/utils.ts",
+      "line": 17,
+      "exported": true
+    },
+    {
+      "name": "CheckoutController",
+      "kind": "class",
+      "file": "packages/api-gateway/src/checkout/checkout.controller.ts",
+      "line": 5,
+      "exported": true
+    },
+    {
+      "name": "CheckoutController",
+      "kind": "class",
+      "file": "packages/api/src/checkout/presentation/checkout.controller.ts",
+      "line": 8,
+      "exported": true
+    },
+    {
+      "name": "CheckoutItem",
+      "kind": "interface",
+      "file": "packages/frontend-v2/src/services/checkout.service.ts",
+      "line": 3,
+      "exported": true
+    },
+    {
+      "name": "CheckoutLineItem",
+      "kind": "interface",
+      "file": "packages/frontend-v2/src/services/checkout.service.ts",
+      "line": 12,
+      "exported": true
+    },
+    {
+      "name": "CheckoutMapper",
+      "kind": "class",
+      "file": "packages/api/src/checkout/infrastructure/checkout.mapper.ts",
+      "line": 26,
+      "exported": true
+    },
+    {
+      "name": "CheckoutModule",
+      "kind": "class",
+      "file": "packages/api-gateway/src/checkout/checkout.module.ts",
+      "line": 9,
+      "exported": true
+    },
+    {
+      "name": "CheckoutModule",
+      "kind": "class",
+      "file": "packages/api/src/checkout/checkout.module.ts",
+      "line": 21,
+      "exported": true
+    },
+    {
+      "name": "CheckoutPage",
+      "kind": "function",
+      "file": "packages/frontend-v2/src/pages/Checkout/CheckoutPage.tsx",
+      "line": 10,
+      "exported": true
+    },
+    {
+      "name": "CheckoutSession",
+      "kind": "interface",
+      "file": "packages/shared/src/types.ts",
+      "line": 56,
+      "exported": true
+    },
+    {
+      "name": "CheckoutSession",
+      "kind": "interface",
+      "file": "packages/frontend-v2/src/services/checkout.service.ts",
+      "line": 19,
+      "exported": true
+    },
+    {
+      "name": "CheckoutSession",
+      "kind": "class",
+      "file": "packages/api/src/checkout/domain/checkout-session.entity.ts",
+      "line": 5,
+      "exported": true
+    },
+    {
+      "name": "CheckoutSessionItemRow",
+      "kind": "interface",
+      "file": "packages/api/src/checkout/infrastructure/checkout.mapper.ts",
+      "line": 15,
+      "exported": true
+    },
+    {
+      "name": "CheckoutSessionResponseDto",
+      "kind": "interface",
+      "file": "packages/api/src/checkout/presentation/checkout-session-response.dto.ts",
+      "line": 11,
+      "exported": true
+    },
+    {
+      "name": "CheckoutSessionRow",
+      "kind": "interface",
+      "file": "packages/api/src/checkout/infrastructure/checkout.mapper.ts",
+      "line": 4,
+      "exported": true
+    },
+    {
+      "name": "CheckoutSessionStatus",
+      "kind": "type",
+      "file": "packages/api/src/checkout/domain/checkout-session.entity.ts",
+      "line": 3,
+      "exported": true
+    }
+  ],
+  "dependencies": {
+    "mostImported": [
+      {
+        "file": "packages/api/src/products/domain/product.repository.ts",
+        "importedBy": 6
+      },
+      {
+        "file": "packages/api/src/products/domain/product.entity.ts",
+        "importedBy": 6
+      },
+      {
+        "file": "packages/api-gateway/src/proxy/proxy.module.ts",
+        "importedBy": 5
+      },
+      {
+        "file": "packages/api-gateway/src/proxy/proxy.service.ts",
+        "importedBy": 5
+      },
+      {
+        "file": "packages/api/src/checkout/domain/checkout-session.entity.ts",
+        "importedBy": 5
+      },
+      {
+        "file": "packages/api/src/checkout/domain/checkout.repository.ts",
+        "importedBy": 4
+      },
+      {
+        "file": "packages/frontend-v2/src/services/api.ts",
+        "importedBy": 3,
+        "description": "Business logic and orchestration services"
+      },
+      {
+        "file": "packages/api/src/checkout/domain/line-item.value-object.ts",
+        "importedBy": 3
+      },
+      {
+        "file": "packages/api-core/src/database.ts",
+        "importedBy": 2,
+        "description": "Source code root"
+      },
+      {
+        "file": "packages/api-core/src/app.service.ts",
+        "importedBy": 2,
+        "description": "Source code root"
+      },
+      {
+        "file": "packages/api/src/products/products.module.ts",
+        "importedBy": 2
+      },
+      {
+        "file": "packages/api-gateway/src/config/services.config.ts",
+        "importedBy": 2,
+        "description": "Configuration files"
+      },
+      {
+        "file": "packages/api/src/products/application/get-products.use-case.ts",
+        "importedBy": 2
+      },
+      {
+        "file": "packages/api/src/products/application/get-product-by-id.use-case.ts",
+        "importedBy": 2
+      },
+      {
+        "file": "packages/api/src/products/application/filter-products.use-case.ts",
+        "importedBy": 2
+      },
+      {
+        "file": "packages/api/src/checkout/application/create-checkout-session.use-case.ts",
+        "importedBy": 2
+      },
+      {
+        "file": "packages/api/src/checkout/application/get-checkout-session.use-case.ts",
+        "importedBy": 2
+      },
+      {
+        "file": "packages/api/src/products/domain/price.entity.ts",
+        "importedBy": 2
+      },
+      {
+        "file": "packages/api/src/checkout/presentation/create-checkout-session.dto.ts",
+        "importedBy": 2
+      },
+      {
+        "file": "packages/api-gateway/src/app.module.ts",
+        "importedBy": 1,
+        "description": "Source code root"
+      }
+    ]
+  },
+  "stats": {
+    "totalSymbols": 133,
+    "exportedSymbols": 103,
+    "analysisTimeMs": 243
+  },
+  "keyFiles": [
+    {
+      "path": "packages/api-core/src/main.ts",
+      "description": "Source code root",
+      "category": "entrypoint"
+    },
+    {
+      "path": "packages/api-gateway/src/main.ts",
+      "description": "Source code root",
+      "category": "entrypoint"
+    },
+    {
+      "path": "packages/api/src/main.ts",
+      "description": "Source code root",
+      "category": "entrypoint"
+    },
+    {
+      "path": "packages/frontend-v1/src/main.tsx",
+      "description": "Source code root",
+      "category": "entrypoint"
+    },
+    {
+      "path": "packages/frontend-v2/src/main.tsx",
+      "description": "Source code root",
+      "category": "entrypoint"
+    },
+    {
+      "path": "packages/shared/src/index.ts",
+      "description": "src module exports",
+      "category": "entrypoint"
+    },
+    {
+      "path": "package.json",
+      "description": "Package manifest",
+      "category": "config"
+    },
+    {
+      "path": "packages/api-core/tsconfig.json",
+      "description": "TypeScript configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/api-gateway/dist/config/services.config.js",
+      "description": "Tool configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/api-gateway/src/config/services.config.ts",
+      "description": "Tool configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/api-gateway/tsconfig.json",
+      "description": "TypeScript configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/api/tsconfig.json",
+      "description": "TypeScript configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/frontend-v1/tsconfig.json",
+      "description": "TypeScript configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/frontend-v1/tsconfig.node.json",
+      "description": "TypeScript configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/frontend-v1/vite.config.ts",
+      "description": "Tool configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/frontend-v2/tsconfig.json",
+      "description": "TypeScript configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/frontend-v2/tsconfig.node.json",
+      "description": "TypeScript configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/frontend-v2/vite.config.ts",
+      "description": "Tool configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/shared/tsconfig.json",
+      "description": "TypeScript configuration",
+      "category": "config"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "description": "TypeScript configuration",
+      "category": "config"
+    },
+    {
+      "path": "packages/shared/src/types.ts",
+      "description": "Type definitions",
+      "category": "types"
+    },
+    {
+      "path": "packages/shared/src/utils.ts",
+      "description": "Utility functions",
+      "category": "util"
+    }
+  ],
+  "navigation": {
+    "tests": "src/**/*.test.ts",
+    "config": [
+      "package.json",
+      "tsconfig.json",
+      "tsconfig.*.json",
+      "vite.config.ts"
+    ],
+    "types": [
+      "packages/shared/src/types.ts",
+      "packages/frontend-v2/src/vite-env.d.ts",
+      "packages/frontend-v1/src/vite-env.d.ts",
+      "packages/api-gateway/dist/main.d.ts",
+      "packages/api-gateway/dist/app.module.d.ts",
+      "packages/api-core/dist/main.d.ts",
+      "packages/api-core/dist/database.d.ts",
+      "packages/api-core/dist/app.module.d.ts",
+      "packages/api/dist/main.d.ts",
+      "packages/api-core/dist/app.service.d.ts"
+    ],
+    "mainLogic": [
+      "src"
+    ]
+  }
+}
