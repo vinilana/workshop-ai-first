@@ -5,7 +5,7 @@ description: Design and maintain CI/CD pipelines
 agentType: devops-specialist
 phases: [E, C]
 generated: 2026-03-14
-status: unfilled
+status: filled
 scaffoldVersion: "2.0.0"
 ---
 

@@ -5,7 +5,7 @@ description: Develop native and cross-platform mobile applications
 agentType: mobile-specialist
 phases: [P, E]
 generated: 2026-03-14
-status: unfilled
+status: filled
 scaffoldVersion: "2.0.0"
 ---
 

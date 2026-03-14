@@ -5,7 +5,7 @@ description: Analyze bug reports and error messages
 agentType: bug-fixer
 phases: [E, V]
 generated: 2026-03-14
-status: unfilled
+status: filled
 scaffoldVersion: "2.0.0"
 ---
 

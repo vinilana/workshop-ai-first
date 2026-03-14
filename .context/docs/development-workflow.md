@@ -4,7 +4,7 @@ name: development-workflow
 description: Day-to-day engineering processes, branching, and contribution guidelines
 category: workflow
 generated: 2026-03-14
-status: unfilled
+status: filled
 scaffoldVersion: "2.0.0"
 ---
 
